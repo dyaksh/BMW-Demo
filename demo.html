@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="bmw.png">
+    <title>BMW</title>
+    <link rel="stylesheet" href="a.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .image {
+            width: 100%;
+        }
+        
+        .list {
+            width: 47%;
+            padding: 15px;
+            float: left;
+        }
+        
+        .qa {
+            font-family: bookman old style;
+        }
+        
+        .pa {
+            font-family: bookman old style;
+            padding-left: 50px;
+            font-size: 50px;
+        }
+        
+        .qa a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+        /* Next & previous buttons */
+        
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        /* Position the "next button" to the right */
+        
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        /* On hover, add a black background color with a little bit see-through */
+        
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        /* Caption text */
+        
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+        /* Number text (1/3 etc) */
+        
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+        /* The dots/bullets/indicators */
+        
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+        /* Fading animation */
+        
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        /* On smaller screens, decrease text size */
+        
+        @media only screen and (max-width: 300px) {
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+        
+        .fa {
+            padding: 10px;
+            font-size: 15px;
+            width: 15px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%;
+        }
+        
+        .fa:hover {
+            opacity: 0.7;
+        }
+        
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+        
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+        
+        .fa-youtube {
+            background: #bb0000;
+            color: white;
+        }
+        
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+    </style>
+</head>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+
+<body>
+
+    <div class="header">
+        <h1 class="top">BMW Group
+            <img src="bmw.png" class="imag" style="width:10%;"></h1>
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="demo.html">Home</a></li>
+            <li><a href="model.html">All Models</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li style="float:right;"><a href="signin.html">SignIn</a></li>
+            <li style="float:right;"><a href="registration.html">Register</a></li>
+        </ul>
+    </div>
+   
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+    
+    <div class="section">
+
+    <img class="nature" src="bmw.jpg" width="100%">
+    <img class="nature" src="bmwGT.jpg" width="100%">
+    <img class="nature" src="bmwi8.jpg" width="100%">
+
+    <img class="nature" src="bmw8.jpeg" width="100%">
+    <img class="nature" src="concept.jpg" width="100%">
+    <img class="nature" src="concept2.jpg" width="100%">
+    <script>
+        w3.slideshow(".nature", 1500);
+    </script>
+    <p class="pa"><strong>THE ALL NEW BMW</strong></p>
+
+    </div>
+
+    <div class="list">
+        <img src="bmwtd.jpg" class="image">
+        <h3 class="qa">REQUEST A TEST DRIVE.</h3>
+        Take a BMW for a test drive today.
+        <br><br>
+        <p class="qa">&rarr; <u><a href="testdrive.html">Test Drive Now</a></u></p>
+    </div>
+
+    <div class="list">
+        <img src="bmw_animation_small.gif" class="image"></div>
+    <h3 class="qa">BMW 360<sup>o</sup>.</h3>
+    <p class="qa">At BMW, we always go the extra mile to make your dream car a reality. <br>Presenting BMW 360°- a unique initiative that offers absolute peace of mind during your BMW ownership experience.<br><br> &rarr; <u>
+            <a href="signin.html">Find out more</a></u></p>
+    </div>
+
+    <div class="footer">
+        <h5> &copy; Copyright 2020-2021 by Yaksh Darji.<br/> All Rights Reserved.</h5>
+        <td align="center width= 30 ">
+            <a href="https://www.youtube.com/channel/UCYwrS5QvBY_JbSdbINLey6Q " class="fa fa-youtube "></a>
+        </td>
+        <td align="center width= 30 ">
+
+            <a href="https://www.facebook.com/BMW" class="fa fa-facebook"></a>
+        </td>
+        <td align="center width= 30 ">
+            <a href="https://twitter.com/bmwgroup?lang=en " class="fa fa-twitter ">
+            </a>
+        </td>
+        <td align="center width=30 ">
+            <a href="https://www.instagram.com/bmw/?hl=en " class="fa fa-instagram "></a>
+        </td>
+    </div>
+
+</body>
+
+</html>

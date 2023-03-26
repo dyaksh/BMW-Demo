@@ -1,0 +1,44 @@
+.top {
+    padding: 50px;
+    font-family: Bookman Old Style;
+    font-size: 60px;
+}
+
+.imag {
+    float: right;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(0, 163, 228, 0.802);
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: blue;
+}
+
+.footer {
+    border: 0px solid grey;
+    background-color: lightgrey;
+    width: 100%;
+    float: left;
+    bottom: 0px;
+    text-align: center;
+    font-family: bookman old style;
+    font-size: 20px;
+}
